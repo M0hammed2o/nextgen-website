@@ -44,7 +44,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href="http://localhost:8081"
+            href="https://app.nextgenintelligence.co.za"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -88,7 +88,7 @@ const Navbar = () => {
               <Button size="sm" className="w-full mt-2">Book a Demo</Button>
             </Link>
             <a
-              href="http://localhost:8081"
+              href="https://app.nextgenintelligence.co.za"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
