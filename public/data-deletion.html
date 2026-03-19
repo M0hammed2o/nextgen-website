@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Data Deletion — NextGen Intelligence</title>
+  <meta name="description" content="Request deletion of your personal data held by NextGen Intelligence (Pty) Ltd. Learn how to opt out, submit a deletion request, and understand your rights under POPIA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0d1117;
+      --card:     #151b23;
+      --text:     #f0f2f5;
+      --primary:  #00d4f5;
+      --accent:   #29e09a;
+      --muted:    #7c8a9a;
+      --border:   #262f3d;
+      --radius:   0.75rem;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background-color: var(--card);
+      padding: 0 1.5rem;
+    }
+    .header-inner {
+      max-width: 56rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 4rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+    .brand-icon {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.375rem;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--bg);
+      letter-spacing: -0.02em;
+    }
+    .brand-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .header-nav {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .header-nav a { color: var(--muted); }
+    .header-nav a:hover { color: var(--primary); text-decoration: none; }
+
+    main {
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 6rem;
+    }
+
+    .page-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+    .page-subtitle {
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+    }
+
+    .content h2 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .content h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .content p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+    .content ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .content ul li {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+      line-height: 1.7;
+    }
+    .content strong { color: var(--text); font-weight: 600; }
+
+    .contact-block {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 2;
+    }
+
+    /* Highlighted action card */
+    .action-card {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .action-card strong { color: var(--text); }
+    .action-card .keyword {
+      display: inline-block;
+      background: color-mix(in srgb, var(--primary) 15%, transparent);
+      color: var(--primary);
+      border: 1px solid color-mix(in srgb, var(--primary) 40%, transparent);
+      border-radius: 0.25rem;
+      padding: 0.1rem 0.5rem;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+    }
+
+    .legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .legal-links a {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 2rem;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: var(--card);
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .legal-links a:hover, .legal-links a.active {
+      border-color: var(--primary);
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .legal-links a.active { background: color-mix(in srgb, var(--primary) 10%, transparent); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .footer-inner {
+      max-width: 56rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.25rem;
+      font-size: 0.8rem;
+    }
+    .footer-links a { color: var(--muted); }
+    .footer-links a:hover { color: var(--primary); text-decoration: none; }
+    .footer-copy { font-size: 0.75rem; color: var(--muted); }
+
+    @media (max-width: 640px) {
+      main { padding: 2.5rem 1rem 4rem; }
+      .header-nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="https://nextgenintelligence.co.za" class="brand">
+      <div class="brand-icon">NG</div>
+      <span class="brand-name">NextGen Intelligence</span>
+    </a>
+    <nav class="header-nav">
+      <a href="https://nextgenintelligence.co.za">Home</a>
+      <a href="https://nextgenintelligence.co.za/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1 class="page-title">User Data Deletion</h1>
+  <p class="page-subtitle">Last updated: 1 March 2025</p>
+
+  <div class="legal-links">
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Service</a>
+    <a href="/data-deletion.html" class="active">Data Deletion</a>
+  </div>
+
+  <div class="content">
+
+    <h2>Your Right to Data Deletion</h2>
+    <p>
+      NextGen Intelligence (Pty) Ltd ("NextGen Intelligence") respects your right to control
+      your personal data. In accordance with the Protection of Personal Information Act (POPIA)
+      and Meta's data handling requirements, you may request the deletion of personal data
+      that we hold about you.
+    </p>
+    <p>
+      This page explains how different categories of users can request data deletion and what
+      to expect during the process.
+    </p>
+
+    <h2>For WhatsApp End Customers</h2>
+    <p>
+      If you have communicated with a business that uses the NextGen AI Platform through WhatsApp
+      and you would like your data deleted, you have two options:
+    </p>
+
+    <h3>Option 1: Opt Out via WhatsApp</h3>
+    <div class="action-card">
+      Send the keyword <span class="keyword">STOP</span> to the business's WhatsApp number.
+      This will immediately stop all automated messaging to your number from that business.
+      Your opted-out status will be recorded, and no further messages will be sent by the platform.
+    </div>
+
+    <h3>Option 2: Submit a Deletion Request</h3>
+    <p>
+      To request the complete deletion of your data from our systems, please email us at
+      <a href="mailto:info@nextgenintelligence.co.za">info@nextgenintelligence.co.za</a>
+      with the subject line <strong>"Data Deletion Request"</strong> and include
+      the following information:
+    </p>
+    <ul>
+      <li>Your full name</li>
+      <li>The phone number you used to communicate via WhatsApp (including country code)</li>
+      <li>The name of the business you communicated with (if known)</li>
+      <li>A brief description of what data you would like deleted</li>
+    </ul>
+
+    <h3>What We Will Delete</h3>
+    <p>Upon receiving and verifying a valid deletion request, we will delete:</p>
+    <ul>
+      <li>Your customer record (display name, phone number, WhatsApp ID)</li>
+      <li>Conversation session data and context</li>
+      <li>Message history associated with your WhatsApp ID</li>
+      <li>Any personal details you provided during the ordering process (name, address, phone)</li>
+    </ul>
+
+    <h3>What We May Retain</h3>
+    <p>
+      In certain cases, we may be required to retain limited data for legitimate business or legal
+      purposes. This includes:
+    </p>
+    <ul>
+      <li>Completed order records with personal identifiers removed (anonymised), which may be retained for the business's financial and accounting records</li>
+      <li>Aggregated, non-identifiable usage statistics</li>
+      <li>Records that we are legally required to maintain under South African tax or business law</li>
+    </ul>
+
+    <h2>For Business Operators and Staff</h2>
+    <p>
+      If you are a business owner, manager, or staff member and wish to have your account and
+      associated data deleted:
+    </p>
+    <ul>
+      <li>
+        <strong>Staff members:</strong> Ask your business owner or manager
+        to deactivate your account through the staff management section of the dashboard. This
+        disables your login immediately.
+      </li>
+      <li>
+        <strong>Business owners:</strong> Contact us at
+        <a href="mailto:info@nextgenintelligence.co.za">info@nextgenintelligence.co.za</a>
+        to request account closure and data deletion. We will export your data if requested and
+        then proceed with deletion.
+      </li>
+    </ul>
+    <p>
+      Upon business account closure, all associated data — including staff accounts, menu data,
+      order history, customer records, and conversation logs — will be deleted within 30 days
+      following a 30-day grace period for data export.
+    </p>
+
+    <h2>Processing Timeline</h2>
+    <p>
+      We will acknowledge your deletion request within <strong>5 business days</strong> and
+      complete the deletion within <strong>30 days</strong> of verification.
+      We will notify you by email once the deletion has been completed.
+    </p>
+    <p>
+      If we require additional information to verify your identity or locate the relevant data,
+      we will contact you within the acknowledgement period.
+    </p>
+
+    <h2>Meta / Facebook Data Deletion Callback</h2>
+    <p>
+      If you connected to a business on our platform through a Facebook or Instagram integration,
+      you may also initiate a data deletion request through your Facebook account settings. We
+      support Meta's data deletion callback protocol and will process these requests automatically.
+    </p>
+
+    <h2>Contact</h2>
+    <p>For all data deletion requests and related enquiries:</p>
+    <div class="contact-block">
+      <strong>NextGen Intelligence (Pty) Ltd</strong><br />
+      Email: <a href="mailto:info@nextgenintelligence.co.za">info@nextgenintelligence.co.za</a><br />
+      Phone: <a href="tel:+27837866021">083 786 6021</a><br />
+      Location: Durban, KwaZulu-Natal, South Africa
+    </div>
+    <p style="margin-top: 1.25rem;">
+      If you are not satisfied with our response to your request, you have the right to lodge a
+      complaint with the
+      <a href="https://inforegulator.org.za" target="_blank" rel="noopener noreferrer">
+        Information Regulator of South Africa
+      </a>.
+    </p>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="https://nextgenintelligence.co.za">Home</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/data-deletion.html">Data Deletion</a>
+      <a href="mailto:info@nextgenintelligence.co.za">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> NextGen Intelligence (Pty) Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
